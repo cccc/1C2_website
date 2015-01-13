@@ -3,157 +3,133 @@
   <head>
     <title>Chaos Cologne 2015</title>
     <meta charset="utf-8" />
-    <style type="text/css">
-      @font-face {
-        font-family: 'Source Code Pro';
-        font-style: normal;
-        font-weight: 400;
-        src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(SourceCodePro.woff) format('woff');
-      }
-      html, body {
-        background: #000;
-        color: #ddd;
-        font-family: "Source Code Pro", monospace;
-        padding: 1ex
-      }
-      a {
-        color: #ddd;
-        text-shadow: 0.2ex 0.2ex 0.1ex #66f;
-        text-decoration: none
-      }
-      header { text-align: right }
-      header img { border: 0px; margin-left: 2em }
-      #c4_logo { height: 74px  }
-      #mainlogo {
-        display: block;
-        height: 10%;
-        width: 100%
-      }
-      #tagline { font-size: xx-large }
-      #sub { font-size: small }
-      section {
-        text-align: center;
-        margin: 0 auto;
-        width: 100%
-      }
-      @media all and (min-width: 33em) {
-        section { width: 30em }
-      }
-      .lc { text-transform: uppercase }
-      .sc { font-variant: small-caps; text-shadow: 0.2ex 0.2ex 0.1ex #afa }
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
     <header>
-      <a href="//koeln.ccc.de"><img id="c4_logo" alt="Chaos Computer Club Cologne" src="hexogen.svg" /></a>
-      <a href="//khm.de"><img id="khm_logo" alt="Academy of Media Arts Cologne" src="logo_khm.png" /></a>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="headlogo">
+        <use xlink:href="#mainlogo" />
+      </svg>
+      <div id="organizers">
+        <a href="//koeln.ccc.de"><img id="c4_logo" alt="Chaos Computer Club Cologne" src="hexogen.svg" /></a>
+        <a href="//khm.de"><img id="khm_logo" alt="Academy of Media Arts Cologne" src="logo_khm.png" /></a>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#travel">Travel</a>
+        <a href="/schedule.html">Schedule</a>
+        <a href="/participate.xhtml">Participate</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
-    <section>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="27" height="12" viewBox="0 7 27 12" id="mainlogo">
-        <style type="text/css">
-          path { fill: #000000; stroke-width: 2; stroke-opacity: 0 }
-          #bg { fill: #fff }
-          #one, #cee, #two {
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            -webkit-animation-duration: 5s;
-            -webkit-animation-iteration-count: infinite
-          }
-          #one {
-            stroke: #f00;
-            animation-name: red;
-            -webkit-animation-name: red
-          }
-          #cee {
-            stroke: #0f0;
-            animation-name: green;
-            -webkit-animation-name: green
-          }
-          #two {
-            stroke: #66f;
-            animation-name: blue;
-            -webkit-animation-name: blue
-          }
-          #dot1 {
-            fill: #f0f;
-            animation: dotwalk 23s linear 5s infinite alternate;
-            -webkit-animation: dotwalk 23s linear 5s infinite alternate
-          }
-          @keyframes red {
-            from { fill: #000; stroke-opacity: 0 }
-            25% { fill: #f00; stroke-opacity: 0.5 }
-            50% { fill: #000; stroke-opacity: 0  }
-          }
-          @keyframes green {
-            25% { fill: #000; stroke-opacity: 0 }
-            50% { fill: #0f0; stroke-opacity: 0.5 }
-            75% { fill: #000; stroke-opacity: 0 }
-          }
-          @keyframes blue {
-            50% { fill: #000; stroke-opacity: 0 }
-            75% { fill: #66f; stroke-opacity: 0.5 }
-            to { fill: #000; stroke-opacity: 0 }
-          }
-          @keyframes dotwalk {
-            5% { transform: translate(0px, 3px) }
-            33% { transform: translate(-16px, 3px) }
-            37% { transform: translate(-16px, 1px) }
-            40% { transform: translate(-14px, 1px) }
-            43% { transform: translate(-14px, -2px) }
-            45% { transform: translate(-15px, -2px) }
-            47% { transform: translate(-15px, -4px) }
-            49% { transform: translate(-14px, -4px) }
-            51% { transform: translate(-14px, -5px) }
-            56% { transform: translate(-11px, -5px) }
-            58% { transform: translate(-11px, -4px) }
-            63% { transform: translate(-8px, -4px) }
-            65% { transform: translate(-8px, -5px) }
-            75% { transform: translate(-2px, -5px) }
-            77% { transform: translate(-2px, -4px) }
-            81% { transform: translate(0px, -4px) }
-            86% { transform: translate(0px, -1px) }
-            93% { transform: translate(-5px, -1px) }
-            to { transform: translate(0px, -1px) }
-          }
+    <main>
+      <section>
+        <span class="target" id="home" />
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 7 27 12" id="mainlogo">
+          <style type="text/css">
+            path { fill: #000000; stroke-width: 2; stroke-opacity: 0 }
+            #bg { fill: #fff }
+            #one, #cee, #two {
+              animation-duration: 5s;
+              animation-iteration-count: infinite;
+              -webkit-animation-duration: 5s;
+              -webkit-animation-iteration-count: infinite
+            }
+            #one {
+              stroke: #f00;
+              animation-name: red;
+              -webkit-animation-name: red
+            }
+            #cee {
+              stroke: #0f0;
+              animation-name: green;
+              -webkit-animation-name: green
+            }
+            #two {
+              stroke: #66f;
+              animation-name: blue;
+              -webkit-animation-name: blue
+            }
+            #dot1 {
+              fill: #f0f;
+              animation: dotwalk 23s linear 5s infinite alternate;
+              -webkit-animation: dotwalk 23s linear 5s infinite alternate
+            }
+            @keyframes red {
+              from { fill: #000; stroke-opacity: 0 }
+              25% { fill: #f00; stroke-opacity: 0.5 }
+              50% { fill: #000; stroke-opacity: 0  }
+            }
+            @keyframes green {
+              25% { fill: #000; stroke-opacity: 0 }
+              50% { fill: #0f0; stroke-opacity: 0.5 }
+              75% { fill: #000; stroke-opacity: 0 }
+            }
+            @keyframes blue {
+              50% { fill: #000; stroke-opacity: 0 }
+              75% { fill: #66f; stroke-opacity: 0.5 }
+              to { fill: #000; stroke-opacity: 0 }
+            }
+            @keyframes dotwalk {
+              5% { transform: translate(0px, 3px) }
+              33% { transform: translate(-16px, 3px) }
+              37% { transform: translate(-16px, 1px) }
+              40% { transform: translate(-14px, 1px) }
+              43% { transform: translate(-14px, -2px) }
+              45% { transform: translate(-15px, -2px) }
+              47% { transform: translate(-15px, -4px) }
+              49% { transform: translate(-14px, -4px) }
+              51% { transform: translate(-14px, -5px) }
+              56% { transform: translate(-11px, -5px) }
+              58% { transform: translate(-11px, -4px) }
+              63% { transform: translate(-8px, -4px) }
+              65% { transform: translate(-8px, -5px) }
+              75% { transform: translate(-2px, -5px) }
+              77% { transform: translate(-2px, -4px) }
+              81% { transform: translate(0px, -4px) }
+              86% { transform: translate(0px, -1px) }
+              93% { transform: translate(-5px, -1px) }
+              to { transform: translate(0px, -1px) }
+            }
 
-          @-webkit-keyframes red {
-            from { fill: #000; stroke-opacity: 0 }
-            25% { fill: #f00; stroke-opacity: 0.5 }
-            50% { fill: #000; stroke-opacity: 0  }
-          }
-          @-webkit-keyframes green {
-            25% { fill: #000; stroke-opacity: 0 }
-            50% { fill: #0f0; stroke-opacity: 0.5 }
-            75% { fill: #000; stroke-opacity: 0 }
-          }
-          @-webkit-keyframes blue {
-            50% { fill: #000; stroke-opacity: 0 }
-            75% { fill: #66f; stroke-opacity: 0.5 }
-            to { fill: #000; stroke-opacity: 0 }
-          }
-          @-webkit-keyframes dotwalk {
-            5% { transform: translate(0px, 3px) }
-            33% { transform: translate(-16px, 3px) }
-            37% { transform: translate(-16px, 1px) }
-            40% { transform: translate(-14px, 1px) }
-            43% { transform: translate(-14px, -2px) }
-            45% { transform: translate(-15px, -2px) }
-            47% { transform: translate(-15px, -4px) }
-            49% { transform: translate(-14px, -4px) }
-            51% { transform: translate(-14px, -5px) }
-            56% { transform: translate(-11px, -5px) }
-            58% { transform: translate(-11px, -4px) }
-            63% { transform: translate(-8px, -4px) }
-            65% { transform: translate(-8px, -5px) }
-            75% { transform: translate(-2px, -5px) }
-            77% { transform: translate(-2px, -4px) }
-            81% { transform: translate(0px, -4px) }
-            86% { transform: translate(0px, -1px) }
-            93% { transform: translate(-5px, -1px) }
-            to { transform: translate(0px, -1px) }
-          }
-        </style>
-        <g id="logo">
+            @-webkit-keyframes red {
+              from { fill: #000; stroke-opacity: 0 }
+              25% { fill: #f00; stroke-opacity: 0.5 }
+              50% { fill: #000; stroke-opacity: 0  }
+            }
+            @-webkit-keyframes green {
+              25% { fill: #000; stroke-opacity: 0 }
+              50% { fill: #0f0; stroke-opacity: 0.5 }
+              75% { fill: #000; stroke-opacity: 0 }
+            }
+            @-webkit-keyframes blue {
+              50% { fill: #000; stroke-opacity: 0 }
+              75% { fill: #66f; stroke-opacity: 0.5 }
+              to { fill: #000; stroke-opacity: 0 }
+            }
+            @-webkit-keyframes dotwalk {
+              5% { transform: translate(0px, 3px) }
+              33% { transform: translate(-16px, 3px) }
+              37% { transform: translate(-16px, 1px) }
+              40% { transform: translate(-14px, 1px) }
+              43% { transform: translate(-14px, -2px) }
+              45% { transform: translate(-15px, -2px) }
+              47% { transform: translate(-15px, -4px) }
+              49% { transform: translate(-14px, -4px) }
+              51% { transform: translate(-14px, -5px) }
+              56% { transform: translate(-11px, -5px) }
+              58% { transform: translate(-11px, -4px) }
+              63% { transform: translate(-8px, -4px) }
+              65% { transform: translate(-8px, -5px) }
+              75% { transform: translate(-2px, -5px) }
+              77% { transform: translate(-2px, -4px) }
+              81% { transform: translate(0px, -4px) }
+              86% { transform: translate(0px, -1px) }
+              93% { transform: translate(-5px, -1px) }
+              to { transform: translate(0px, -1px) }
+            }
+          </style>
           <rect id="bg" x="0.1" y="8" width="26.8" height="10" />
           <path id="top-border" d="m 0,14 2,0 0,-2 -1,0 0,-3 1,0 0,-1 4,0 0,1 2,0 0,-1 7,0 0,1 2,0 0,-1 8,0 0,1 1,0 0,1 1,0 L 27,0 0,0 z" />
           <path id="dot1" d="m 16,13 1,0 0,1 -1,0 z" />
@@ -162,53 +138,71 @@
           <path id="cee" d="m 8,10 1,0 0,-1 5,0 0,1 1,0 0,1 -2,0 0,-1 -3,0 0,5 3,0 0,-1 2,0 0,1 -1,0 0,1 -5,0 0,-1 -1,0 z" />
           <path id="two" d="m 17,12 0,-2 1,0 0,-1 5,0 0,1 1,0 0,2 -1,0 0,1 -1,0 0,1 -1,0 0,1 4,0 0,1 -8,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 1,0 0,-1 -3,0 0,2 z" />
           <path id="bottom-border" d="m 0,27 27,0 0,-9 -10,0 0,-1 -1,0 0,1 -15,0 0,-1 -1,0 z" />
-        </g>
-      </svg>
-      <span id="tagline">The <span class="lc">edge</span> of control</span><br />
-      <span id="sub">Coming to KHM&#xA0;Cologne May&#xA0;15th&#xA0;2015</span>
-    </section>
+        </svg>
+        <h1 id="tagline">The <span class="lc">edge</span> of control</h1>
+        <span id="sub">Coming to KHM&#xA0;Cologne May&#xA0;15th&#xA0;2015</span>
+      </section>
 
-    <section>
-      <p>
-        The <span class="sc">Chaos Cologne</span> Conference brings<br />
-        &#x201C;<a href="https://en.wikipedia.org/wiki/Hackers_%26_Painters">hackers and painters</a>&#x201D;
-        together to celebrate<br />
-        what both cultures have in common.
-      </p>
-      <p>
-        We artfully break through barriers of conventions.<br />
-        We have fun with things.<br />
-        We build art on the edges of control.
-      </p>
-      <p>
-        We live in a world of chances and changes.<br />
-        We are in constant need of information and inspiration<br />
-        to find and create our ways through a giant maze<br />
-        of borders, barriers and expectations.
-      </p>
-      <p>
-        We share, we steal.<br />
-        We build and rebuild.<br />
-        We create.
-      </p>
-      <p class="sc">
-        Join Us.<br />
-        May&#xA0;15th 'til 17th<br />
-        KHM Cologne
-      </p>
-      <p>
-        Find your way to the maze, have fun, conquer it<br />
-        and become what you are.
-      </p>
-      <p>
-        <span style="float: left; font-size: 5ex">&#x26A0;</span>
-        <span style="float: right; font-size: 5ex">&#x26A0;</span>
-        Be aware! This is not an Exhibition.<br />
-        This is a Challenge.
-      </p>
-      <p>
-        <span class="sc">Follow us:</span> <a href="//twitter.com/chaos_cologne">Twitter</a>
-      </p>
-    </section>
+      <section>
+        <span class="target" id="about" />
+        <h2>About</h2>
+        <p>
+          The <span class="sc">Chaos Cologne</span> Conference brings<br />
+          &#x201C;<a href="https://en.wikipedia.org/wiki/Hackers_%26_Painters">hackers and painters</a>&#x201D;
+          together to celebrate<br />
+          what both cultures have in common.
+        </p>
+        <p>
+          We artfully break through barriers of conventions.<br />
+          We have fun with things.<br />
+          We build art on the edges of control.
+        </p>
+        <p>
+          We live in a world of chances and changes.<br />
+          We are in constant need of information and inspiration<br />
+          to find and create our ways through a giant maze<br />
+          of borders, barriers and expectations.
+        </p>
+        <p>
+          We share, we steal.<br />
+          We build and rebuild.<br />
+          We create.
+        </p>
+        <p class="sc">
+          Join Us.<br />
+          May&#xA0;15th 'til 17th<br />
+          KHM Cologne
+        </p>
+        <p>
+          Find your way to the maze, have fun, conquer it<br />
+          and become what you are.
+        </p>
+        <p>
+          <span style="float: left; font-size: 5ex">&#x26A0;</span>
+          <span style="float: right; font-size: 5ex">&#x26A0;</span>
+          Be aware! This is not an Exhibition.<br />
+          This is a Challenge.
+        </p>
+        <p>
+          <span class="sc">Follow us:</span> <a href="//twitter.com/chaos_cologne">Twitter</a>
+        </p>
+      </section>
+
+      <section>
+        <span class="target" id="travel" />
+        <h2>Travel</h2>
+        <iframe id="osm" src="http://www.openstreetmap.org/export/embed.html?bbox=6.954528093338013%2C50.9307312617681%2C6.96557879447937%2C50.93593767229412&amp;layer=mapnik&amp;marker=50.93333453988655%2C6.960053443908691"></iframe><br/><span class="small"><a href="http://www.openstreetmap.org/?mlat=50.93333&amp;mlon=6.96005#map=17/50.93333/6.96005">View Larger Map</a></span>
+      </section>
+
+      <section>
+        <span class="target" id="contact" />
+        <h2>Contact</h2>
+        <ul>
+          <li>Twitter: <a href="//twitter.com/chaos_cologne">chaos_cologne</a></li>
+          <li>Mail: <a href="mailto:orga@chaos.cologne">orga@chaos.cologne</a></li>
+        </ul>
+      </section>
+    </main>
+    <script type="text/javascript" src="scroll.js" />
   </body>
 </html>
