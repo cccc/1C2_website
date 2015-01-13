@@ -2,7 +2,7 @@
 
 var DELAY = 500;
 var smoothScroll = function(target) {
-  var posX = window.pageXOffset
+  var posX = window.pageXOffset;
   var start = window.pageYOffset;
   var target = document.querySelector(target).offsetTop;
   var speed = (target - start) / DELAY;
